@@ -1473,11 +1473,9 @@ input, textarea, select, option, button, a, p, li, label { font-size: clamp(0.95
   line-height: 1.6;
 }
 .join-banner {
-  position: sticky;
-  top: 64px;
-  left: 0;
-  right: 0;
-  z-index: 999;
+  position: relative;
+  margin-top: 64px;
+  z-index: 1;
   background: linear-gradient(
     90deg,
     rgba(201,168,76,0.15) 0%,
@@ -2708,7 +2706,7 @@ body.hindi span[data-hi] { display: inline; }
   <a class="sticky-wa" href="https://wa.me/919981420091" target="_blank">💬 WhatsApp</a>
 </div>
 
-<button class="lang-toggle-float" onclick="toggleLang()" id="langFloatBtn" title="हिंदी / English">🇮🇳</button>
+<button class="lang-toggle-float" onclick="toggleLang()" id="langFloatBtn" title="हिंदी / English">हिं</button>
 
 <script>
 let isHindi = false;
@@ -2719,7 +2717,7 @@ function toggleLang() {
   document.getElementById('langBtn').textContent = isHindi ? 'English' : 'हिंदी';
   const langFloatBtn = document.getElementById('langFloatBtn');
   if (langFloatBtn) {
-    langFloatBtn.textContent = isHindi ? '🇬🇧' : '🇮🇳';
+    langFloatBtn.textContent = isHindi ? 'EN' : 'हिं';
     langFloatBtn.title = isHindi ? 'हिंदी' : 'English';
   }
 }
